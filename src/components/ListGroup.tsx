@@ -1,8 +1,12 @@
 // import { Fragment } from "react";
+interface Props {
+  items: string[];
+  heading: string;
+}
+
 import { MouseEvent, useState } from "react";
 
-function ListGroup() {
-  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+function ListGroup({ items, heading }: Props) {
   //   items = [];
   //Hook - State Hook
   const [selectedIndex, setSelectedIndex] = useState(-1);
