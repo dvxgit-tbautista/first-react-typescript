@@ -15,7 +15,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
 
   // "event: MouseEvent - type annotation - specify the type of variables, parameters, etc.."
   //Event handler
-  const handleClick = (event: MouseEvent) => console.log(event);
+  // const handleClick = (event: MouseEvent) => console.log(event);
 
   return (
     <>
