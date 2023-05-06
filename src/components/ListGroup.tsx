@@ -1,9 +1,11 @@
 // import { Fragment } from "react";
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 
 function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
   //   items = [];
+  //Hook - State Hook
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   // "event: MouseEvent - type annotation - specify the type of variables, parameters, etc.."
   //Event handler
@@ -17,10 +19,17 @@ function ListGroup() {
       <ul className="list-group">
         {items.map((item, index) => (
           <li
-            className="list-group-item"
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
             key={item}
             // onClick={(event) => console.log(item, index)}
-            onClick={handleClick}
+            // onClick={handleClick}
+            onClick={() => {
+              setSelectedIndex(index);
+            }}
           >
             {item}
           </li>
