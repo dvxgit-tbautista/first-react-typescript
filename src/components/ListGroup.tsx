@@ -17,7 +17,7 @@ function ListGroup({ items, heading }: Props) {
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       {/* {items.length === 0 ? <p>No item found</p> : null} */}
       {items.length === 0 && <p>No item found</p>}
       <ul className="list-group">
